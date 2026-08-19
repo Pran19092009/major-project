@@ -45,8 +45,8 @@ Customer Support Analytics converts customer support data into an interactive da
 ## 🎯 Project Goal
 
 - The main goal of this project is to understand customer support data
-- and find useful information about customer issues, response time,
-- support performance and customer satisfaction.
+ and find useful information about customer issues, response time,
+ support performance and customer satisfaction.
 ## 📂 Project Structure
 
 ```text
