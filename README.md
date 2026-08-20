@@ -52,6 +52,6 @@ Customer Support Analytics converts customer support data into an interactive da
 ```text
 Customer-Support-Analytics/
 │
-├── major(3).py
+├── customer_support_application.py
 ├── customer_support.csv
 └── README.md
