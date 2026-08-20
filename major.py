@@ -189,7 +189,7 @@ with tab1:
         st.subheader("📅 Response Time Trend",text_alignment="center")
         time=filter_df.groupby(filter_df["Ticket_Created_Date"].dt.date)["Response_Time_Hours"].mean().sort_values().head(10)
         fig2,ax2=plt.subplots(figsize=(7,6),facecolor="#F9F0E0")
-        ax2.set_title("Response Time",fontsize=16,fontweight="bold")
+        ax2.set_title("Response Time Trend",fontsize=16,fontweight="bold")
         ax2.set_xlabel("Ticket Created date")
         ax2.set_ylabel("Response Time")
         ax2.plot(time.index,time.values,marker="H",mfc="#007979",ms=10)
@@ -204,7 +204,7 @@ with tab1:
 
     c1,c2=st.columns(2)
     with c1:
-        st.subheader("Top 5 Customers with Most Issues",text_alignment="center")
+        st.subheader("🌟 Top 5 Customers with Most Issues",text_alignment="center")
 
         top_customers =(filter_df["Customer_Name"].value_counts().head(5))
 
@@ -225,7 +225,7 @@ with tab1:
         st.pyplot(fig3)
 
     with c2:
-        st.subheader("Top 5 Specific Problem")
+        st.subheader("📌 Top 5 Specific Problem")
         problem=filter_df.groupby("Customer_Specific_Problem")["Contact_Attempt_Count"].mean().sort_values(ascending=False).head(5)
         fig4,ax4=plt.subplots(figsize=(7,6),facecolor="#FFF2DB")
         ax4.set_title("Top 5 Problem")
@@ -293,7 +293,7 @@ with tab1:
     st.caption(
         "Download the currently filtered customer support data."
     )
-    csv = filter_df.to_csv(index=False).encode("utf-8")
+    csv = filter_df.to_csv(index=False)
 
     st.download_button(
         "📥 Download Filtered clean_Data",
@@ -303,7 +303,7 @@ with tab1:
     )
 
 with tab2:
-    st.subheader("Customer Support Insights")
+    st.subheader("🧠 Customer Support Insights")
     st.caption(
         "Key findings from the selected customer support data."
     )
